@@ -1,0 +1,16 @@
+@import "./styles/index";
+@import "the-new-css-reset";
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    background-image: url("./styles/PortfolioPozadina_v22.png");
+    background-position: top;
+    background-repeat: repeat;
+  //  background-size: 100%;
+    color: $color-text;
+    font-size: $size-rem;
+}
