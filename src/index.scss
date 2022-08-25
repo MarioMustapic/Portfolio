@@ -5,12 +5,55 @@ html {
     font-size: 62.5%;
 }
 
+em {
+  font-weight:600;
+  font-style:italic;
+}
+strong {
+  font-weight:bold;
+}
+
+i {
+  font-style: italic;
+}
 
 body {
+    
     background-image: url("./styles/PortfolioPozadina_v22.png");
     background-position: top;
+    background-size: 100vw;
     background-repeat: repeat;
   //  background-size: 100%;
+    background-color: rgb(96, 176, 151);
     color: $color-text;
-    font-size: $size-rem;
+    font-size: $size-vw;
+}
+.App-header__h1 {
+  font-family: $font-family;
+  font-size: $size-vw*3;
+  display: flexbox;
+  position: absolute;
+  left: 60vw;
+  top: 10vw;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: flex-start;
+}
+.About {
+  font-family: $font-family;
+  font-size: $size-vw;
+
+  &__h2 {
+    font-size: $size-vw*2;
+    position: absolute;
+    left: 40vw;
+    top: 23vw;
+  }
+
+  &__p {
+    position: absolute;
+    left: 20vw;
+    top: 32vw;    
+  }
+
 }
