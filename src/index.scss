@@ -17,8 +17,8 @@ i {
   font-style: italic;
 }
 
+
 body {
-    
     background-image: url("./styles/PortfolioPozadina_v22.png");
     background-position: top;
     background-size: 100vw;
@@ -27,6 +27,18 @@ body {
     background-color: rgb(96, 176, 151);
     color: $color-text;
     font-size: $size-vw;
+}
+.Navigation {
+  
+
+  &__item {
+    display: inline-flex;
+    flex-flow: row;
+    margin: 5px;
+    background-color: rgba(248, 244, 244, 0.836);
+    padding: 10px;
+    border-radius: 40%;
+  }
 }
 .App-header__h1 {
   font-family: $font-family;
@@ -58,7 +70,7 @@ body {
 
 }
 
-.github {
+.github-logo {
   position: absolute;
   left: 5vw;
   top: 36vw;
