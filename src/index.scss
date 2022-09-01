@@ -19,40 +19,62 @@ i {
 
 
 body {
-    background-image: url("./styles/PortfolioPozadina_v22.png");
-    background-position: top;
-    background-size: 100vw;
-    background-repeat: repeat;
-  //  background-size: 100%;
-    background-color: rgb(96, 176, 151);
+    background-color: black;
     color: $color-text;
     font-size: $size-vw;
+    font-family: $font-family;
 }
-.Navigation {
-  
+.navigation {
+  position: fixed;
+  display: flex;
+  z-index: 2;
+  left: 16vw;
+  background-color: rgba(248, 244, 244, 0.836);
+
+  &__fake-slider {
+    position: fixed;
+    background-image: url("./styles/PortfolioPozadina_v3-obrub.png");
+    z-index: 1;
+    background-position: top;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vw;
+  }
 
   &__item {
     display: inline-flex;
     flex-flow: row;
-    margin: 5px;
+    justify-content: center;
+    font-weight: bold;
+    width: 12vw;
+    margin: 3px;
     background-color: rgba(248, 244, 244, 0.836);
     padding: 10px;
-    border-radius: 40%;
   }
 }
-.App-header__h1 {
-  font-family: $font-family;
+.app-header__h1 {
   font-size: $size-vw*3;
   display: flexbox;
   position: absolute;
-  left: 60vw;
+  left: 64vw;
   top: 10vw;
   flex-flow: row nowrap;
   justify-content: stretch;
   align-items: flex-start;
 }
-.About {
-  font-family: $font-family;
+.back-ground-image {
+  background-image: url("./styles/PortfolioPozadina_v3.png");
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  left: 19vw;
+  top: 4.8vw;
+  background-size: 80vw;
+  background-repeat: no-repeat;
+}
+.about {
   font-size: $size-vw;
 
   &__h2 {
@@ -69,11 +91,15 @@ body {
   }
 
 }
+.showcase {
+  position: absolute;
+  top: 80vw;
+}
 
 .github-logo {
   position: absolute;
-  left: 5vw;
-  top: 36vw;
+  left: 6vw;
+  top: 38vw;
   background-color: white;
   padding: 10px;
   border-radius: 20%;
