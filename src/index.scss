@@ -2,7 +2,8 @@
 @import "the-new-css-reset";
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 em {
@@ -19,39 +20,61 @@ i {
 
 
 body {
-    background-color: black;
-    color: $color-text;
-    font-size: $size-vw;
-    font-family: $font-family;
+  background-color: black;
+  color: $color-text;
+  font-size: $size-vw;
+  font-family: $font-family;
 }
-.navigation {
-  position: fixed;
-  display: flex;
-  z-index: 2;
+nav {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 0px;
+  animation: navigation-load 500ms ease-in forwards;
+}
+nav ul {
+  position: relative;
   left: 16vw;
-  background-color: rgba(248, 244, 244, 0.836);
-
-  &__fake-slider {
-    position: fixed;
-    background-image: url("./styles/PortfolioPozadina_v3-obrub.png");
-    z-index: 1;
-    background-position: top;
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vw;
-  }
-
-  &__item {
-    display: inline-flex;
-    flex-flow: row;
-    justify-content: center;
-    font-weight: bold;
-    width: 12vw;
-    margin: 3px;
-    background-color: rgba(248, 244, 244, 0.836);
-    padding: 10px;
-  }
+}
+nav li {
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  font-weight: bold;
+  width: 12vw;
+  margin: 5px 5px;
+  padding: 10px;
+  box-shadow: 3px 3px 3px 3px gray;
+  background-color: white;
+  animation: navigation-load-link;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
+nav li:first-child {
+  animation-name: navigation-load-first-link;
+  transform: translateX(-800%);
+}
+nav li:last-child {
+  animation-name: navigation-load-last-link;
+}
+li:hover {
+  color: greenyellow;
+  background-color: black;
+  opacity: .8;
+}
+.fake-slider {
+  position: fixed;
+  z-index: 1;
+  background-image: url("./styles/PortfolioPozadina_v3-obrub.png");
+  background-position: top;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vw;
 }
 .app-header__h1 {
   font-size: $size-vw*3;
@@ -65,7 +88,7 @@ body {
 }
 .back-ground-image {
   background-image: url("./styles/PortfolioPozadina_v3.png");
-  z-index: -1;
+  z-index: -2;
   position: absolute;
   width: 100vw;
   height: 100vw;
@@ -86,6 +109,7 @@ body {
 
   &__p {
     position: absolute;
+    z-index: -1;
     left: 20vw;
     top: 32vw;    
   }
@@ -104,4 +128,60 @@ body {
   padding: 10px;
   border-radius: 20%;
   height: 8vw;
+}
+
+@keyframes navigation-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+    position: fixed;
+  }
+}
+@keyframes navigation-load-link {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes navigation-load-first-link {
+  0% {
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes navigation-load-last-link {
+  0% {
+    transform: translateX(80%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
