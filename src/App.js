@@ -5,12 +5,14 @@ function App() {
   return (
     <div className="App">
       <header className="app-header">
-        <ul className="navigation">
-          <li className="navigation__item"><a href="#about">ABOUT</a></li>
-          <li className="navigation__item"><a href="#showcase">SHOWCASE</a></li>
-          <li className="navigation__item"><a href="#contacts">CONTACTS</a></li>
-        </ul>
-        <div className="navigation__fake-slider"></div>
+        <nav>
+          <ul className="navigation">
+            <li className="navigation__item"><a href="#about">ABOUT</a></li>
+            <li className="navigation__item"><a href="#showcase">SHOWCASE</a></li>
+            <li className="navigation__item"><a href="#contacts">CONTACTS</a></li>
+          </ul>
+        </nav>
+        <div className="fake-slider"></div>
         <h1 className="app-header__h1">
           <strong>Hello</strong> <i>there,</i> <br />
           and <em>welcome</em>.
