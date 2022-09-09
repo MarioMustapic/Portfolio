@@ -5,6 +5,33 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
+*:lang(en) {
+  display: none;
+}
+html::-webkit-scrollbar {
+  z-index: 3;
+  width: 1vw;
+  background-color: white;
+}
+html::-webkit-scrollbar-button {
+  background-color: #4445;
+}
+html::-webkit-scrollbar-thumb {
+  border: 1px solid #999;
+  background-color: #555;
+  border-radius: 500px;
+  box-shadow: 1px 2px 3px 1px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+html::-webkit-scrollbar-track-piece {
+  background-color: #444;
+  border-radius: 500px;
+}
+html::-webkit-scrollbar-track {
+  background-color: #4445;
+}
 
 em {
   font-weight:600;
@@ -18,7 +45,6 @@ i {
   font-style: italic;
 }
 
-
 body {
   background-color: black;
   color: $color-text;
@@ -27,7 +53,7 @@ body {
 }
 nav {
   position: absolute;
-  z-index: 9999;
+  z-index: 2;
   width: 100%;
   background-color: whitesmoke;
   padding: 0px;
@@ -40,11 +66,8 @@ nav ul {
 nav li {
   display: inline-flex;
   flex-flow: row;
-  justify-content: center;
   font-weight: bold;
-  width: 12vw;
   margin: 5px 5px;
-  padding: 10px;
   box-shadow: 3px 3px 3px 3px gray;
   background-color: white;
   animation: navigation-load-link;
@@ -54,6 +77,12 @@ nav li {
   animation-fill-mode: forwards;
   transform: scale(0);
 }
+nav li div {
+  display: inline-flex;
+  justify-content: center;
+  width: 12vw;
+  padding: 10px;
+}
 nav li:first-child {
   animation-name: navigation-load-first-link;
   transform: translateX(-800%);
@@ -61,7 +90,7 @@ nav li:first-child {
 nav li:last-child {
   animation-name: navigation-load-last-link;
 }
-li:hover {
+li:hover, div :focus-visible {
   color: greenyellow;
   background-color: black;
   opacity: .8;
@@ -71,20 +100,18 @@ li:hover {
   z-index: 1;
   background-image: url("./styles/PortfolioPozadina_v3-obrub.png");
   background-position: top;
-  background-size: 100vw;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vw;
+  background-size: contain;
+  width: 20vw;
+  height: 200vw;
 }
-.app-header__h1 {
+
+.app-header__h1{
   font-size: $size-vw*3;
-  display: flexbox;
+  font-weight: bold;
   position: absolute;
-  left: 64vw;
-  top: 10vw;
-  flex-flow: row nowrap;
-  justify-content: stretch;
-  align-items: flex-start;
+  left: 65vw;
+  top: 11vw;
 }
 .back-ground-image {
   background-image: url("./styles/PortfolioPozadina_v3.png");
@@ -93,7 +120,7 @@ li:hover {
   width: 100vw;
   height: 100vw;
   left: 19vw;
-  top: 4.8vw;
+  top: 2.5vw;
   background-size: 80vw;
   background-repeat: no-repeat;
 }
@@ -119,10 +146,13 @@ li:hover {
   position: absolute;
   top: 80vw;
 }
-
+.chat-app-logo {
+  position: absolute;
+  left: 30vw;
+}
 .github-logo {
   position: absolute;
-  left: 6vw;
+  left: 40vw;
   top: 38vw;
   background-color: white;
   padding: 10px;
