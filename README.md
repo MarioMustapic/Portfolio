@@ -25,8 +25,8 @@ Some basic info about me and showcase some of mine works.
 
 **Requirements**
 
-- Node.js 16.0.0+
-- npm 7.10.0+ **\*\*** PH \***\*\*\*\*\*\*\***
+- Node.js 16.15.0+
+- npm 8.5.5+
 
 **First steps**
 
@@ -52,5 +52,5 @@ Build the project for production.
 ## Roadmap
 
 - [ ] Make better page styling
-- [ ] ...
+- [ ] Make it more mobile friendly (atm it loks bad when in vertical orientation)
 - [ ] Change domain from free one to paid one?
