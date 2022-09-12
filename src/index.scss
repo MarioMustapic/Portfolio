@@ -137,23 +137,76 @@ li:hover, div :focus-visible {
   &__p {
     position: absolute;
     z-index: -1;
-    left: 20vw;
-    top: 32vw;    
+    left: 26.4vw;
+    top: 29vw;    
   }
 
 }
 .showcase {
+  //background-color: red;
   position: absolute;
-  top: 80vw;
+  top: 34vw;
+  &__title {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: bold;
+    width: 23vw;
+    top: -6vw;
+    left: 67vw;
+    margin: 5px 5px;
+    padding: 1vw;
+    box-shadow: 3px 3px 3px 3px gray;
+    background-color: white;
+    animation: navigation-load-link;
+    animation-duration: 400ms;
+    animation-timing-function: ease-in;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+  }
+
+  &__chat-app-link {
+    position: relative;
+    left: 40vw;
+
+  }
+
+  &__chat-app-logo {
+    position: relative;
+    max-width: 30vw;
+    top: 13vw;
+    border-radius: 1vw;
+    border: 2px solid #aaa9;
+  }
 }
-.chat-app-logo {
+.contacts {
   position: absolute;
-  left: 30vw;
+  left: 67vw;
+  top: 73vw;
+
+  &__title {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: bold;
+    width: 23vw;
+    margin: 5px 5px;
+    padding: 1vw;
+    box-shadow: 3px 3px 3px 3px gray;
+    background-color: white;
+    animation: navigation-load-link;
+    animation-duration: 400ms;
+    animation-timing-function: ease-in;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+  }
 }
 .github-logo {
   position: absolute;
-  left: 40vw;
-  top: 38vw;
+  left: 15vw;
+  top: 7vw;
   background-color: white;
   padding: 10px;
   border-radius: 20%;

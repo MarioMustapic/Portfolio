@@ -58,16 +58,14 @@ function App() {
           I finished a 3 months course for HTM CSS and React and I am currently searching for a job, while also upgrading mine skills and knowledge in the field of web development, with a smidge of design in it.
         </p>
       </div>
-      <div className="showcase" id="showcase" tabIndex="0">
-        <a href="https://mariomustapicchat-app.netlify.app/" target="_blank" rel="noopener noreferrer">
-          <img src= { Chatapp } alt="Link to Chat-app" className='chat-app-logo' />
+      <div className="showcase" id="showcase" >
+        <div className="showcase__title" tabIndex="0">RADIONICA</div>
+        <a href="https://mariomustapicchat-app.netlify.app/" target="_blank" rel="noopener noreferrer"    className='showcase__chat-app-link'>
+          <img src= { Chatapp } alt="Link to Chat-app" className='showcase__chat-app-logo' />
         </a>
-        <a href="https://github.com/MarioMustapic" target="_blank" rel="noopener noreferrer">
-          <img src= { Github } alt="" className='' />
-        </a>
-
       </div>
       <div className="contacts" id="contacts" tabIndex="0">
+        <div className="contacts__title">KONTAKTI</div>
         <a href="https://github.com/MarioMustapic" target="_blank" rel="noopener noreferrer">
           <img src= { Github } alt="Link to Github" className='github-logo' />
         </a>
